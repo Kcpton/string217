@@ -25,7 +25,8 @@ char *strcpy(char s1[], const char s2[]) {
         s1[index] = s2[index];
         index++;
     }
-    return s1;
+    char* output = s1;
+    return output;
 }
 
 char *strcat(char s1[], const char s2[]) {
@@ -37,7 +38,8 @@ char *strcat(char s1[], const char s2[]) {
         s1[start + index] = s2[index];
         index++;
     }
-    return s1;
+    char* output = s1;
+    return output;
 }
 
 int strncmp(const char s1[], const char s2[], size_t n) {
@@ -71,4 +73,6 @@ char *strstr(const char s1[], const char s2[]) {
         }
         index++;
     }
+    char* output = s1;
+    return output;
 }
