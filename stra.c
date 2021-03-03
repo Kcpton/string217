@@ -32,11 +32,10 @@ char *Str_copy(char s1[], const char s2[]) {
 
 char *Str_concat(char s1[], const char s2[]) {
     size_t start = Str_getLength(s1);
-    size_t end = Str_getLength(s2);
     size_t index = 0;
     assert(s1 != NULL);
     assert(s2 != NULL);
-    while(index < end) {
+    while(s2[index] != '\0') {
         s1[start + index] = s2[index];
         index++;
     }
