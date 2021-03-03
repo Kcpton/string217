@@ -49,8 +49,8 @@ int Str_compare(const char s1[], const char s2[]) {
     assert(s1 != NULL);
     assert(s2 != NULL);
     while(s1[index] != '\0' && s2[index] != '\0') {
-        if (s1[index] - s2[index] != 0) {
-            return s1[index] - s2[index];
+        if ((int) (s1[index] - s2[index]) != 0) {
+            return (int) (s1[index] - s2[index]);S
         }
      index++;
     }
@@ -88,16 +88,16 @@ char *Str_search(const char s1[], const char s2[]) {
     return NULL;
 }
 
-/*
+
 int main(int argc, char const *argv[]) {
     char a[20] = "goodbyecheese";
-    char b[10] = "z";
+    char b[10] = "";
     char* d = Str_search(a,b);
     char* e = strstr(a,b);
-    printf("%s", e);
+    printf("%d", 'a' - '\0');
     return 0;
 }
-*/
+
 
 
 
