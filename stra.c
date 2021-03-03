@@ -4,6 +4,7 @@
 /*--------------------------------------------------------------------*/
 
 #include "str.h"
+#include <string.h>
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
@@ -79,12 +80,11 @@ char *Str_search(const char s1[], const char s2[]) {
 }
 /*
 int main(int argc, char const *argv[]) {
-    char a[10] = "hi";
-    char b[10] = "bye";
-    size_t output = Str_getLength(a);
-    printf("%d \n", (int) output);
-    Str_copy(a,b);
-    printf("%s", a);
+    char a[10] = "bye";
+    char b[10] = "hi";
+    char* c = Str_copy(a,b);
+    printf("%s", c);
     return 0;
 }
 */
+
