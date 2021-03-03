@@ -55,7 +55,6 @@ int Str_compare(const char s1[], const char s2[]) {
      index++;
     }
     if (s1[index] == '\0' && s2[index] != '\0') {
-        printf("%s", "hi");
         return -1;
     }
     if (s2[index] == '\0'&& s1[index] != '\0') {
@@ -82,7 +81,7 @@ char *Str_search(const char s1[], const char s2[]) {
         }
         index++;
     }
-    return NULL;
+    return s1;
 }
 
 /*
