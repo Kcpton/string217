@@ -19,15 +19,18 @@ size_t Str_getLength(const char pcSrc[])
 }
 
 char *Str_copy(char s1[], const char s2[]) {
-    size_t index = 0;
+    char *p =s1;
     assert(s1 != NULL);
     assert(s2 != NULL);
-    size_t s1len = Str_getLength(s1);
-    while(s2[index] != '\0') {
-        s1[s1len + index] = s2[index];
-        index++;
+    while (*p != '0') {
+        p++;
     }
-    s1[index] = '\0';
+    while (*s2 != '\0') {
+        *p = *s2;
+        p++;
+        s2++;
+    }
+    *p = '\0';
     return s1;
 }
 
