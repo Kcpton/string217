@@ -1,5 +1,6 @@
 #ifndef strH
 #define strH
+#include <stddef.h>
 
 size_t Str_getLength(const char pcSrc[]);
 
