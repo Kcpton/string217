@@ -29,7 +29,7 @@ static size_t replaceAndWrite(const char *pcLine,
    while(pEnd != NULL) {
       counter++;
       while(pcLine != pEnd) {
-         putchar(*pcLine);
+         putchar(*pcFrom);
          pcLine++;
       }
       pcLine += fromlen;
@@ -54,13 +54,6 @@ static size_t replaceAndWrite(const char *pcLine,
    characters. */
 
 
-   int main() {
-      char a[15] = "hellojello";
-      char b[10] = "el";
-      char c[10] = "cook";
-      replaceAndWrite(a,b,c);
-   }
-/*
 int main(int argc, char *argv[])
 {
    enum {MAX_LINE_SIZE = 4096};
@@ -86,4 +79,4 @@ int main(int argc, char *argv[])
    fprintf(stderr, "%lu replacements\n", (unsigned long)uReplaceCount);
    return 0;
 }
-*/
+
