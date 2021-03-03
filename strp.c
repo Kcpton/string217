@@ -49,6 +49,22 @@ char *Str_concat (char s1[], const char s2[]) {
 }
 
 int Str_compare(const char s1[], const char s2[]) {
+    char *p1 = s1;
+    char *p2 = s2;
+    while (*p1 != '\0' && *p2 != 0) {
+        if(*p1 - *p2 != 0) {
+            return *p1 - *p2;
+        }
+        p1++;
+        p2++;
+    }
+    if(*p1 - *p2 != 0) {
+            return *p1 - *p2;
+        }
+    return 0;
+}
+
+int Str_compare2(const char s1[], const char s2[]) {
     size_t index = 0;
     assert(s1 != NULL);
     assert(s2 != NULL);
