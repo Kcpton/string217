@@ -36,7 +36,7 @@ char *Str_concat (char s1[], const char s2[]) {
     char *p =s1;
     assert(s1 != NULL);
     assert(s2 != NULL);
-    while (*p != '0') {
+    while (*p != '\0') {
         p++;
     }
     while (*s2 != '\0') {
