@@ -32,14 +32,15 @@ char *Str_copy(char s1[], const char s2[]) {
 
 char *Str_concat(char s1[], const char s2[]) {
     size_t start = Str_getLength(s1);
-    int index = 0;
+    size_t end = Str_getLength(s2);
+    size_t index = 0;
     assert(s1 != NULL);
     assert(s2 != NULL);
-    while(s2[index] != '\0') {
-        s1[(int)start + index] = s2[index];
+    while(index < end) {
+        s1[start + index] = s2[index];
         index++;
     }
-    s1[index] = '\0';
+    s1[index + start] = '\0';
     return s1;
 }
 
@@ -85,17 +86,13 @@ char *Str_search(const char s1[], const char s2[]) {
     output = (char*) &s1;
     return output;
 }
-/*
+
 int main(int argc, char const *argv[]) {
     char a[10] = "byeds";
     char b[10] = "hi";
-    const char acSrc[] = {'\0', 's'};
-    char acDest1[] = {'d', 'd'};
-    char* c = Str_copy(a,b);
-    char* d = Str_copy(acDest1, acSrc);
+    char* c = Str_concat(a,b);
     printf("%s", a);
-    printf("%c", acDest1[0]);
     return 0;
 }
-*/
+
 
