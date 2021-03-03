@@ -17,7 +17,7 @@ size_t Str_getLength(const char pcSrc[])
    return uLength;
 }
 
-char *strcpy(char s1[], const char s2[]) {
+char *Str_copy(char s1[], const char s2[]) {
     size_t index = 0;
     size_t s2len = 0;
     assert(s1 != NULL && s2 != NULL);
@@ -28,7 +28,7 @@ char *strcpy(char s1[], const char s2[]) {
     return s1;
 }
 
-char *strcat(char s1[], const char s2[]) {
+char *Str_concat(char s1[], const char s2[]) {
     size_t start = Str_getLength(s1);
     size_t end = Str_getLength(s2);
     size_t index = 0;
@@ -41,7 +41,7 @@ char *strcat(char s1[], const char s2[]) {
     return output;
 }
 
-int strncmp(const char s1[], const char s2[], size_t n) {
+int Str_compare(const char s1[], const char s2[], size_t n) {
     size_t index = 0;
     assert(s1 != NULL && s2 != NULL);
     while(index < n) {
@@ -56,7 +56,7 @@ int strncmp(const char s1[], const char s2[], size_t n) {
     return 0;
 }
 
-char *strstr(const char s1[], const char s2[]) {
+char *Str_search(const char s1[], const char s2[]) {
     size_t s1len = Str_getLength(s1);
     size_t s2len = Str_getLength(s2);
     size_t index = 0;
