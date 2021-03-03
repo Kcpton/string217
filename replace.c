@@ -53,21 +53,10 @@ static size_t replaceAndWrite(const char *pcLine,
    Assume that no line of stdin consists of more than MAX_LINE_SIZE-1
    characters. */
 
-int main () {
-   char* a = "1234567890123456789012345678901234567890";
-   char* b = "2";
-   char* c = "xy";
-   replaceAndWrite(a,b,c);
-}
 
-
-
-/*
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
    enum {MAX_LINE_SIZE = 4096};
    enum {PROPER_ARG_COUNT = 3};
-
    char acLine[MAX_LINE_SIZE];
    char *pcFrom;
    char *pcTo;
@@ -88,4 +77,4 @@ int main(int argc, char *argv[])
    fprintf(stderr, "%lu replacements\n", (unsigned long)uReplaceCount);
    return 0;
 }
-*/
+
