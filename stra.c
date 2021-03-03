@@ -40,6 +40,7 @@ char *Str_concat(char s1[], const char s2[]) {
         s1[start + index] = s2[index];
         index++;
     }
+    s1[index] = '\0';
     return output;
 }
 
