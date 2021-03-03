@@ -71,7 +71,7 @@ char *Str_search(const char s1[], const char s2[]) {
     const char* output;
     assert(s1 != NULL);
     assert(s2 != NULL);
-    while(index + s2len < s1len) {
+    while(index + s2len <= s1len) {
         index2 = 0;
         while(index2 < s2len && s1[index + index2] == s2[index2]) {
             index2++;
