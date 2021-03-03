@@ -17,33 +17,33 @@ size_t Str_getLength(const char pcSrc[])
 }
 
 char *strcpy(char s1[], const char s2[]) {
-    assert(s1 != NULL && s2 != NULL);
     size_t index = 0;
     size_t s2len = 0;
+    assert(s1 != NULL && s2 != NULL);
+    char* output = s1;
     while (index < s2len) {
         s1[index] = s2[index];
         index++;
     }
-    char* output = s1;
     return output;
 }
 
 char *strcat(char s1[], const char s2[]) {
-    assert(s1 != NULL && s2 != NULL);
     size_t start = Str_getLength(s1);
     size_t end = Str_getLength(s2);
     size_t index = 0;
+    assert(s1 != NULL && s2 != NULL);
+    char* output = s1;
     while(index < end) {
         s1[start + index] = s2[index];
         index++;
     }
-    char* output = s1;
     return output;
 }
 
 int strncmp(const char s1[], const char s2[], size_t n) {
-    assert(s1 != NULL && s2 != NULL && n != NULL);
     size_t index = 0;
+    assert(s1 != NULL && s2 != NULL);
     while(index < n) {
         if (s1[index] > s2[index]) {
             return 1;
@@ -57,21 +57,22 @@ int strncmp(const char s1[], const char s2[], size_t n) {
 }
 
 char *strstr(const char s1[], const char s2[]) {
-    assert(s1 != NULL && s2 != NULL);
     size_t s1len = Str_getLength(s1);
     size_t s2len = Str_getLength(s2);
     size_t index = 0;
     size_t index2 = 0;
+    char* output;
+    assert(s1 != NULL && s2 != NULL);
     while(index + s2len < s1len) {
         index2 = 0;
         while(index2 < s2len && s1[index + index2] == s2[index2]) {
             index2++;
         }
         if (index2 == s2len) {
-            return &s1[index];
+            output = s1[index];
+            return output;
         }
         index++;
     }
-    char* output = s1;
-    return output;
+    return s1;
 }
