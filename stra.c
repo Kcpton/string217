@@ -48,16 +48,14 @@ int Str_compare(const char s1[], const char s2[]) {
     size_t index = 0;
     assert(s1 != NULL);
     assert(s2 != NULL);
-    while(s1[index] != '0' && s2[index] != '0') {
-        if (s1[index] > s2[index]) {
-            return 1;
+    while(s1[index] != '\0' && s2[index] != '\0') {
+        if (s1[index] - s2[index] != 0) {
+            return s1[index] - s2[index];
         }
-        else if (s1[index] < s2[index]) {
-            return -1;
-        }
-        index++;
+     index++;
     }
     if (s1[index] == '\0' && s2[index] != '\0') {
+        printf("%s", "hi");
         return -1;
     }
     if (s2[index] == '\0'&& s1[index] != '\0') {
@@ -89,10 +87,11 @@ char *Str_search(const char s1[], const char s2[]) {
 }
 /*
 int main(int argc, char const *argv[]) {
-    char a[10] = "byeds";
-    char b[10] = "hi";
-    char* c = Str_concat(a,b);
-    printf("%s", a);
+    char a[10] = "bye";
+    char b[10] = "bye";
+    int c = 'a' - 'a';
+    int d = Str_compare(a,b);
+    printf("%d", d);
     return 0;
 }
 */
