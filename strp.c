@@ -78,7 +78,7 @@ char *Str_search(const char s1[], const char s2[]) {
             p2++;
         }
         if (*p2 == '\0') {
-            return (char*) s1;
+            return (char*) p1;
         }
         p1++;
     }
