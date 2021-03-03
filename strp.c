@@ -80,16 +80,16 @@ char *Str_search(const char s1[], const char s2[]) {
     }
     while(*pointer1 != '\0') {
         pointer2 = (char*)s2;
-        pointer3 = p1;
+        pointer3 = pointer1;
         while(*pointer3 == *pointer2 && *pointer3 != '\0' 
             && *pointer2 != '\0') {
             pointer3++;
             pointer2++;
         }
         if (*pointer2 == '\0') {
-            return (char*) p1;
+            return (char*) pointer1;
         }
-        p1++;
+        pointer1++;
     }
     
     return NULL;
