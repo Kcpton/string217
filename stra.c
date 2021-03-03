@@ -22,10 +22,11 @@ char *Str_copy(char s1[], const char s2[]) {
     size_t index = 0;
     size_t s2len = Str_getLength(s2);
     assert(s1 != NULL && s2 != NULL);
-    while (index <= s2len) {
+    while (index < s2len) {
         s1[index] = s2[index];
         index++;
     }
+    s1[index] = '\0';
     return s1;
 }
 
@@ -78,13 +79,13 @@ char *Str_search(const char s1[], const char s2[]) {
     output = (char*) &s1;
     return output;
 }
-/*
+
 int main(int argc, char const *argv[]) {
-    char a[10] = "bye";
+    char a[10] = "byeds";
     char b[10] = "hi";
     char* c = Str_copy(a,b);
     printf("%s", c);
     return 0;
 }
-*/
+
 
