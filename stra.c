@@ -54,11 +54,8 @@ int Str_compare(const char s1[], const char s2[]) {
         }
      index++;
     }
-    if (s1[index] == '\0' && s2[index] != '\0') {
-        return -1;
-    }
-    if (s2[index] == '\0'&& s1[index] != '\0') {
-        return 1;
+    if ((int) (s1[index] - s2[index]) != 0) {
+            return (int) (s1[index] - s2[index]);
     }
     return 0;
 }
