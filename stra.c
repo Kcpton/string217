@@ -24,7 +24,6 @@ char *strcpy(char s1[], const char s2[]) {
     while (index < s2len) {
         s1[index] = s2[index];
         index++;
-        return s1;
     }
     return s1;
 }
