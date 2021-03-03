@@ -3,6 +3,7 @@
 /* Author: Kevin Chen                                            */
 /*--------------------------------------------------------------------*/
 
+#include <str.h>
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
