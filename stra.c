@@ -34,14 +34,14 @@ char *Str_concat(char s1[], const char s2[]) {
     size_t start = Str_getLength(s1);
     size_t end = Str_getLength(s2);
     size_t index = 0;
-    char* output = s1;
-    assert(s1 != NULL && s2 != NULL);
+    assert(s1 != NULL);
+    assert(s2 != NULL);
     while(index < end) {
         s1[start + index] = s2[index];
         index++;
     }
     s1[index] = '\0';
-    return output;
+    return s1;
 }
 
 int Str_compare(const char s1[], const char s2[]) {
