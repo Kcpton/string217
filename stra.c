@@ -19,8 +19,8 @@ size_t Str_getLength(const char pcSrc[])
 char *strcpy(char s1[], const char s2[]) {
     size_t index = 0;
     size_t s2len = 0;
-    assert(s1 != NULL && s2 != NULL);
     char* output = s1;
+    assert(s1 != NULL && s2 != NULL);
     while (index < s2len) {
         s1[index] = s2[index];
         index++;
@@ -32,8 +32,8 @@ char *strcat(char s1[], const char s2[]) {
     size_t start = Str_getLength(s1);
     size_t end = Str_getLength(s2);
     size_t index = 0;
-    assert(s1 != NULL && s2 != NULL);
     char* output = s1;
+    assert(s1 != NULL && s2 != NULL);
     while(index < end) {
         s1[start + index] = s2[index];
         index++;
@@ -69,7 +69,7 @@ char *strstr(const char s1[], const char s2[]) {
             index2++;
         }
         if (index2 == s2len) {
-            output = s1[index];
+            output = &s1[index];
             return output;
         }
         index++;
