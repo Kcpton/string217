@@ -81,7 +81,7 @@ char *Str_search(const char s1[], const char s2[]) {
         }
         index++;
     }
-    return s1;
+    return NULL;
 }
 
 /*
