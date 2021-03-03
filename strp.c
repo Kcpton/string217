@@ -49,8 +49,8 @@ char *Str_concat (char s1[], const char s2[]) {
 }
 
 int Str_compare(const char s1[], const char s2[]) {
-    char *p1 = s1;
-    char *p2 = s2;
+    char *p1 = (char*)s1;
+    char *p2 = (char*)s2;
     while (*p1 != '\0' && *p2 != 0) {
         if(*p1 - *p2 != 0) {
             return *p1 - *p2;
@@ -65,9 +65,9 @@ int Str_compare(const char s1[], const char s2[]) {
 }
 
 char *Str_search(const char s1[], const char s2[]) {
-    char *p1 = s1;
-    char *p2 = s2;
-    char *p3 = s1;
+    char *p1 = (char*)s1;
+    char *p2 = (char*)s2;
+    char *p3 = (char*)s1;
     const char* output;
     assert(s1 != NULL);
     assert(s2 != NULL);
