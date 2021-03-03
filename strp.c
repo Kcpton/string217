@@ -68,7 +68,6 @@ char *Str_search(const char s1[], const char s2[]) {
     char *p1 = (char*)s1;
     char *p2 = (char*)s2;
     char *p3 = (char*)s1;
-    const char* output;
     assert(s1 != NULL);
     assert(s2 != NULL);
     while(p1 != '\0') {
@@ -83,7 +82,7 @@ char *Str_search(const char s1[], const char s2[]) {
         }
         p1++;
     }
-    if (Str_compare(s2, "") == 0) {
+    if (Str_compare(s2, "") == 0 && Str_compare(s1, "")) {
         return (char*) s1;
     }
     return NULL;
