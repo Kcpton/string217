@@ -85,6 +85,7 @@ char *Str_search(const char s1[], const char s2[]) {
     return NULL;
 }
 
+/*
 int main(int argc, char const *argv[]) {
     char a[10] = "byeasdfs";
     char b[10] = "as";
@@ -92,6 +93,7 @@ int main(int argc, char const *argv[]) {
     printf("%s", d);
     return 0;
 }
+*/
 
 
 
