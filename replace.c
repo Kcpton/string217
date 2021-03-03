@@ -22,6 +22,9 @@ static size_t replaceAndWrite(const char *pcLine,
 {
    size_t fromlen = Str_getLength(pcFrom);
    size_t counter = 0;
+   assert(pcLine != NULL);
+   assert(pcFrom != NULL);
+   assert(pcTo != NULL);
    char* pEnd = Str_search(pcLine, pcFrom);
    while(pEnd != NULL) {
       counter++;
