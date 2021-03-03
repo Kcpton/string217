@@ -82,7 +82,7 @@ char *Str_search(const char s1[], const char s2[]) {
         }
         p1++;
     }
-    if (Str_compare(s2, "") == 0 && Str_compare(s1, "") == 0) {
+    if (Str_getLength(s1) == 0 && (Str_getLength)(s2) == 0) {
         return (char*) s1;
     }
     return NULL;
