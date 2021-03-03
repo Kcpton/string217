@@ -59,50 +59,31 @@ int Str_compare(const char s1[], const char s2[]) {
         p2++;
     }
     if(*p1 - *p2 != 0) {
-            return *p1 - *p2;
-        }
-    return 0;
-}
-
-int Str_compare2(const char s1[], const char s2[]) {
-    size_t index = 0;
-    assert(s1 != NULL);
-    assert(s2 != NULL);
-    while(s1[index] != '\0' && s2[index] != '\0') {
-        if (s1[index] - s2[index] != 0) {
-            return s1[index] - s2[index];
-        }
-     index++;
-    }
-    if (s1[index] == '\0' && s2[index] != '\0') {
-        return -1;
-    }
-    if (s2[index] == '\0'&& s1[index] != '\0') {
-        return 1;
+        return *p1 - *p2;
     }
     return 0;
 }
 
 char *Str_search(const char s1[], const char s2[]) {
-    size_t s1len = Str_getLength(s1);
-    size_t s2len = Str_getLength(s2);
-    size_t index = 0;
-    size_t index2 = 0;
+    char *p1 = s1;
+    char *p2 = s2;
+    char *p3 = s1;
     const char* output;
     assert(s1 != NULL);
     assert(s2 != NULL);
-    while(index + s2len <= s1len) {
-        index2 = 0;
-        while(index2 < s2len && s1[index + index2] == s2[index2]) {
-            index2++;
+    while(p1 != '\0') {
+        p2 = s2;
+        p3 = p1;
+        while(*p3 == *p2 && *p3 != '\0' && p2 != '\0') {
+            p3++;
+            p2++;
         }
-        if (index2 == s2len) {
-            output = &s1[index];
-            return (char*) output;
+        if (*p2 == '\0') {
+            return (char*) s1;
         }
-        index++;
+        p1++;
     }
-    if (s1len == 0 && s2len == 0) {
+    if (Str_compare(s2, "") == 0) {
         return (char*) s1;
     }
     return NULL;
