@@ -29,7 +29,7 @@ static size_t replaceAndWrite(const char *pcLine,
    while(pEnd != NULL) {
       counter++;
       while(pcLine != pEnd) {
-         putchar(*pcFrom);
+         putchar(*pcLine);
          pcLine++;
       }
       pcLine += fromlen;
@@ -52,6 +52,7 @@ static size_t replaceAndWrite(const char *pcLine,
    how many replacements were made, and return 0.
    Assume that no line of stdin consists of more than MAX_LINE_SIZE-1
    characters. */
+
 
 int main(int argc, char *argv[])
 {
@@ -78,3 +79,4 @@ int main(int argc, char *argv[])
    fprintf(stderr, "%lu replacements\n", (unsigned long)uReplaceCount);
    return 0;
 }
+
