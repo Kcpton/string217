@@ -20,13 +20,13 @@ size_t Str_getLength(const char pcSrc[])
 char *strcpy(char s1[], const char s2[]) {
     size_t index = 0;
     size_t s2len = 0;
-    char* output = s1;
     assert(s1 != NULL && s2 != NULL);
     while (index < s2len) {
         s1[index] = s2[index];
         index++;
+        return s1;
     }
-    return output;
+    return s1;
 }
 
 char *strcat(char s1[], const char s2[]) {
