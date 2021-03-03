@@ -69,11 +69,11 @@ char *strstr(const char s1[], const char s2[]) {
             index2++;
         }
         if (index2 == s2len) {
-            output = s1[index];
+            output = &s1[index];
             return output;
         }
         index++;
     }
-    output = s1;
+    output = &s1;
     return output;
 }
