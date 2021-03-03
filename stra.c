@@ -86,7 +86,7 @@ char *Str_search(const char s1[], const char s2[]) {
     output = (char*) &s1;
     return output;
 }
-
+/*
 int main(int argc, char const *argv[]) {
     char a[10] = "byeds";
     char b[10] = "hi";
@@ -94,5 +94,6 @@ int main(int argc, char const *argv[]) {
     printf("%s", a);
     return 0;
 }
+*/
 
 
