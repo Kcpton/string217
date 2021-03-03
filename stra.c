@@ -43,10 +43,10 @@ char *Str_concat(char s1[], const char s2[]) {
     return output;
 }
 
-int Str_compare(const char s1[], const char s2[], size_t n) {
+int Str_compare(const char s1[], const char s2[]) {
     size_t index = 0;
     assert(s1 != NULL && s2 != NULL);
-    while(index < n) {
+    while(s1[index] != '0' && s2[index] != '0') {
         if (s1[index] > s2[index]) {
             return 1;
         }
@@ -54,6 +54,12 @@ int Str_compare(const char s1[], const char s2[], size_t n) {
             return -1;
         }
         index++;
+    }
+    if (s1[index] == '\0') {
+        return -1;
+    }
+    if (s2[index] == '\0') {
+        return 1;
     }
     return 0;
 }
