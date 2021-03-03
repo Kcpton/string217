@@ -4,12 +4,12 @@
 
 size_t Str_getLength(const char pcSrc[]);
 
-char *strcpy(char s1[], const char s2[]);
+char *Str_copy(char s1[], const char s2[]);
 
-char *strcat(char s1[], const char s2[]);
+char *Str_concat(char s1[], const char s2[]);
 
-int strncmp(const char s1[], const char s2[], size_t n);
+int Str_compare(const char s1[], const char s2[], size_t n);
 
-char *strstr(const char s1[], const char s2[]);
+char *Str_search(const char s1[], const char s2[]);
 
 #endif
