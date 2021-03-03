@@ -72,7 +72,7 @@ char *Str_search(const char s1[], const char s2[]) {
     assert(s1 != NULL);
     assert(s2 != NULL);
     while(p1 != '\0') {
-        p2 = s2;
+        p2 = (char*)s2;
         p3 = p1;
         while(*p3 == *p2 && *p3 != '\0' && p2 != '\0') {
             p3++;
