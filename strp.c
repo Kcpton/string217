@@ -70,7 +70,7 @@ char *Str_search(const char s1[], const char s2[]) {
     char *p3 = (char*)s1;
     assert(s1 != NULL);
     assert(s2 != NULL);
-    if (Str_getLength(s1) == 0 && Str_getLength(s2) == 0) {
+    if (Str_getLength(s2) == 0) {
         return (char*) s1;
     }
     while(p1 != '\0') {
