@@ -22,8 +22,9 @@ char *Str_copy(char s1[], const char s2[]) {
     size_t index = 0;
     assert(s1 != NULL);
     assert(s2 != NULL);
-    while (s2[index] != '\0') {
-        s1[index] = s2[index];
+    size_t s1len = Str_getLength(s1);
+    while(s2[index] != '\0') {
+        s1[s1len + index] = s2[index];
         index++;
     }
     s1[index] = '\0';
