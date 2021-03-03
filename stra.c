@@ -69,7 +69,8 @@ char *Str_search(const char s1[], const char s2[]) {
     size_t index = 0;
     size_t index2 = 0;
     const char* output;
-    assert(s1 != NULL && s2 != NULL);
+    assert(s1 != NULL);
+    assert(s2 != NULL);
     while(index + s2len < s1len) {
         index2 = 0;
         while(index2 < s2len && s1[index + index2] == s2[index2]) {
@@ -89,10 +90,11 @@ char *Str_search(const char s1[], const char s2[]) {
 
 /*
 int main(int argc, char const *argv[]) {
-    char a[10] = "byeasdfs";
-    char b[10] = "as";
+    char a[20] = "goodbyecheese";
+    char b[10] = "z";
     char* d = Str_search(a,b);
-    printf("%s", d);
+    char* e = strstr(a,b);
+    printf("%s", e);
     return 0;
 }
 */
